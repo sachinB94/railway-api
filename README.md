@@ -9,7 +9,7 @@ npm install railway
 ##Usage
 
 ```js
-var railway = require('railway')
+var railway = require('railway-api')
 ```
 
 - set API key (optional: uses demo key)
