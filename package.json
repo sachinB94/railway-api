@@ -1,0 +1,28 @@
+{
+  "name": "railway",
+  "version": "0.1.0",
+  "description": "An API with various functionalities for indian railways",
+  "main": "index.js",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/sachinb94/railway.git"
+  },
+  "bugs" : {
+    "url" : "https://github.com/sachinb94/railway/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "coffee-script": "1.8.x"
+  },
+  "keywords": [
+    "railway",
+    "indianrailway",
+    "irctc",
+    "train",
+    "pnr"
+  ],
+  "author": "Sachin Bansal <sachinbansal94@gmail.com>",
+  "license": "MIT"
+}
