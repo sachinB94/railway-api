@@ -1,5 +1,5 @@
 {
-  "name": "railway",
+  "name": "railway-api",
   "version": "1.0.0",
   "description": "An API with various functionalities for indian railways",
   "main": "index.js",
