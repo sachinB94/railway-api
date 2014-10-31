@@ -2,7 +2,7 @@
   "name": "railway-api",
   "version": "1.1.0",
   "description": "An API with various functionalities for indian railways",
-  "main": "index.js",
+  "main": "index.coffee",
   "repository" : {
     "type" : "git",
     "url" : "https://github.com/sachinb94/railway.git"
