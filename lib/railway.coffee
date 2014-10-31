@@ -81,6 +81,24 @@
       else
         callback err, null
     return
+    
+  railway.seatAvailability = (trainNo, source, destination, date, type, checkQuota..., callback) ->
+    callback 'Error: Invalide Date format. Please use DD-MM-YYYY', null if validateDay(date) is false
+    if checkQuota.length is 0
+      quota = 'GN'
+    else quota = checkQuota[0]
+    request "http://api.railwayapi.com/check_seat/train/#{trainNo}/source/#{source}/dest/#{destination}/date/#{date}/class/#{type}/quota/#{quota}/apikey/#{@_apikey}", (err, res) ->
+      unless err
+        response = JSON.parse res.body
+        if response.err is false
+          scanResponseCode response.response_code, (resMsg) ->
+            callback resMsg, response
+            return
+        else
+          callback 'Error: Unable to fetch seats right now. Please try again later.', null
+      else
+        callback err, null
+    return
 
   module.exports = railway
   return
