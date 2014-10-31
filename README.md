@@ -67,3 +67,15 @@ Get train name using number and vice versa.
 ```js
 railway.name_number('<train name or number>', function (err, res) {})
 ```
+
+- Seat Availability
+
+Get Train Seat Availability.
+
+```js
+railway.seatAvailability = ('<trainNo>', '<source>', '<destination>', '<date>', '<class>', '<quota>', function (err, res) {})
+```
+
+class: valid class code can be fetched from http://www.indianrail.gov.in/class_Code.html
+
+quota(optional: defaults to GN): valid quota code can be fetched from http://www.indianrail.gov.in/quota_Code.html
