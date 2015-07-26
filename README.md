@@ -12,12 +12,11 @@ npm install railway
 var railway = require('railway-api')
 ```
 
-- set API key (optional: uses demo key)
+- set API key (MANDATORY)
 
 ```js
 railway.setApikey('<API key>')
 ```
-Demo API is already included, though, our quota may have already exhausted for today.
 You may register for a key at http://www.railwayapi.com/pricing/
 
 - Station name to Code
