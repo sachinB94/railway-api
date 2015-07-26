@@ -11,7 +11,7 @@
       callback "Error: Quota exhausted for day"
     return
 
-  railway._apikey = '16113';
+  # railway._apikey = '16113';
 
   railway.setApikey = (_apikey) ->
   	@_apikey = _apikey
