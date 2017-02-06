@@ -20,6 +20,7 @@ railway.setApikey('<API key>')
 You may register for a key at http://www.railwayapi.com/pricing/
 
 - Check PNR status
+
 Get PNR status using 10 digit PNR No.
 
 ```js
