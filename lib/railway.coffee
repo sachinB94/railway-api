@@ -15,7 +15,18 @@
 
   railway.setApikey = (_apikey) ->
   	@_apikey = _apikey
-
+    
+ railway.checkPnr = (pnrno, callback) ->
+  request "http://api.railwayapi.com/pnr_status/pnr/#{pnrno}/apikey/#{@_apikey}", (err, res) ->
+    unless err
+      response = JSON.parse res.body
+      scanResponseCode response.response_code, (resMsg) ->
+        callback resMsg, response
+        return
+    else
+      callback err, null
+  return
+      
   railway.stationCode = (stationName, callback) ->
     request "http://api.railwayapi.com/name_to_code/station/#{stationName}/apikey/#{@_apikey}", (err, res) ->
       unless err
